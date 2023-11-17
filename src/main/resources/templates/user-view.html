@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User info</title>
+</head>
+<body>
+
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name" th:field="${user.name}" ><br><br>
+<label for="surname">Surname:</label><br>
+<input type="text" id="surname" name="surname" th:field="${user.surname}"><br><br>
+<label for="age">Age:</label><br>
+<input type="text" id="age" name="age" th:field="${user.age}"><br><br>
+<label for="email">Email:</label><br>
+<input type="text" id="email" name="email" th:field="${user.email}"><br><br>
+<label for="username">Username:</label><br>
+<input type="text" id="username" name="username" th:field="${user.username}"><br><br>
+<label for="password">Password:</label><br>
+<input type="text" id="password" name="password" th:field="${user.password}"><br><br>
+<label for="roles">Roles:</label><br>
+<input type="text" id="roles" name="roles" th:field="${user.roles}"><br>Role 1 is "User", role 2 is "Admin".<br>
+
+<br><br>
+<a href="/logout">Logout</a>
+
+</body>
+</html>

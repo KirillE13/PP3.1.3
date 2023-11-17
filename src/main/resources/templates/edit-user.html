@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+</head>
+<body>
+<h2>User info</h2>
+<br>
+<div>
+    <form action="#" th:action="@{/admin/saveUser}" th:object="${user}" th:method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <p>Name: <input type="text" th:field="*{name}"/></p>
+        <p>Surname: <input type="text" th:field="*{surname}"/></p>
+        <p>Age: <input type="text" th:field="*{age}"/></p>
+        <p>Email: <input type="text" th:field="*{email}"/></p>
+        <p>Username: <input type="text" th:field="*{username}"/></p>
+        <p>Password: <input type="text" th:field="*{password}"/></p>
+        <p>Roles:<input type="text" th:field="*{roles}"/>Only two roles. Enter 1 for "User"; 2 for "Admin"; 1, 2 for both roles</p>
+
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<br> <br> <br> <br>
+<a href="/logout">Logout</a>
+</body>
+</html>
