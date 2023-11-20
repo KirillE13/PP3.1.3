@@ -14,29 +14,20 @@ import java.util.Set;
 public class User implements UserDetails {
 
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "surname", nullable = false)
     private String surname;
 
-    @Column(name = "age", nullable = false)
     private int age;
 
-    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "username", nullable = false)
     private String username;
 
-    @Column(name = "password", nullable = false)
     private String password;
-
-
 
     @ManyToMany
     @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", nullable = false),
